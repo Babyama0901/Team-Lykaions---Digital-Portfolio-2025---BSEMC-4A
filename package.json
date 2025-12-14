@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://TeamLykaions.com",
+  "homepage": "https://babyama0901.github.io/Team-Lykaions---Digital-Portfolio-2025---BSEMC-4A/",
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.4",
     "autoprefixer": "^10.4.21",
