@@ -1,0 +1,359 @@
+#root {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #213547;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: transparent;
+  /* Allow canvas to show through */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Library Styles */
+.library-container {
+  padding: 40px 20px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+  /* Transparent so body bg shows */
+}
+
+@keyframes liquidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.library-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff8a65;
+  padding: 10px;
+  transition: transform 0.2s;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
+.library-header {
+  margin-bottom: 60px;
+}
+
+.library-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #aa8e86, #ef8e73);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.library-header p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Grid Layout */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+}
+
+.book-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1.414;
+  /* A4 aspect ratio approx */
+  position: relative;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2),
+    -10px 10px 30px rgba(0, 0, 0, 0.15);
+  /* Drop shadow to right/bottom */
+  border-radius: 4px;
+  /* Harder edges for book look */
+  transition: box-shadow 0.3s ease;
+}
+
+.book-card:hover .book-wrapper {
+  box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.25),
+    -15px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+/* Internal Layout of Cover */
+.cover-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.uni-logo {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.uni-text-group {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.uni-name {
+  font-size: 6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.college-name {
+  font-size: 4px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  line-height: 1.1;
+  max-width: 120px;
+}
+
+.cover-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 10px;
+}
+
+.portfolio-label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.main-title {
+  font-family: 'Eurostile', 'Orbitron', sans-serif;
+  /* Tech feel */
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+}
+
+.cover-footer {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presented-by {
+  font-size: 6px;
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.student-name-cover {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.student-course-cover {
+  font-size: 5px;
+  opacity: 0.8;
+  max-width: 150px;
+  line-height: 1.2;
+}
+
+
+/* Spine and Sheen */
+.book-spine-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(0, 0, 0, 0.4) 100%);
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+.book-sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Footer Labels */
+.book-label-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.footer-name {
+  display: block;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-bottom: 4px;
+}
+
+.footer-full-name {
+  display: block;
+  font-size: 0.75rem;
+  color: #cccccc;
+}
+
+/* Book View Styling */
+.book-view-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-to-library-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.back-to-library-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Page Styling */
+.page {
+  background-color: white;
+  /* Fix transparency issue */
+  padding: 0;
+  box-shadow: inset 0 0 30px -10px rgba(0, 0, 0, 0.1);
+  /* Inner shadow for depth */
+}
+
+.page-dark {
+  background-color: #2b2b2b;
+  color: #ecf0f1;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
