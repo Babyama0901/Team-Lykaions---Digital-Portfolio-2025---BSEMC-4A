@@ -129,7 +129,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "ELLARIE SUERO",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://online.fliphtml5.com/ycycit/Suero_Portfolio/#p=1"
+        link: "https://online.fliphtml5.com/ycycit/Suero_Portfolio/"
     },
     {
         id: 19,
