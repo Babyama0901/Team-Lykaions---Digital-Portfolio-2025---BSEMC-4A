@@ -43,4 +43,4 @@ To run this project locally, follow these steps:
 
 ## License
 
-[Add License Information Here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
