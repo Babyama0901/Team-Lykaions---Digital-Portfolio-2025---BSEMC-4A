@@ -16,14 +16,57 @@ function Book() {
     return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
   });
 
+  // State for book dimensions
+  const [bookDimensions, setBookDimensions] = useState({ width: 450, height: 636 });
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      // Base dimensions (desktop)
+      let newWidth = 450;
+      let newHeight = 636;
+
+      // Mobile adjustment
+      if (screenWidth < 768) {
+        // Calculate max available width with some padding
+        const maxWidth = screenWidth - 20; // 10px padding on each side
+        // Maintain aspect ratio approx 1:1.414 (A4)
+        const aspectRatio = 450 / 636;
+
+        newWidth = maxWidth;
+        newHeight = newWidth / aspectRatio;
+
+        // Check if height fits, if not constrain by height
+        const maxHeight = screenHeight - 100; // Space for button and margins
+        if (newHeight > maxHeight) {
+          newHeight = maxHeight;
+          newWidth = newHeight * aspectRatio;
+        }
+      }
+
+      setBookDimensions({ width: newWidth, height: newHeight });
+    };
+
+    // Initial calculation
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const isMobile = window.innerWidth < 768;
+
   return (
     <HTMLFlipBook
-      width={450}
-      height={636}
+      width={bookDimensions.width}
+      height={bookDimensions.height}
       maxShadowOpacity={0.5}
       drawShadow={true}
       showCover={true}
       size='fixed'
+      usePortrait={isMobile}
     >
       {sortedImages.map((imgSrc, index) => (
         <div className="page" key={index}>
@@ -34,11 +77,6 @@ function Book() {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'contain', // Changed from 'cover' to 'contain' or 'fill' based on request? 
-                // User said "No cropped images" -> 'contain' (might leave space) or 'fill' (might stretch).
-                // User said "no margin". If aspect ratio matches, cover is fine. 
-                // Given the instruction "Add all the images... No cropped images... no margin", 
-                // usually 'fill' stretches to fit, avoiding crop and margin.
                 objectFit: 'fill'
               }}
             />

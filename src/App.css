@@ -357,3 +357,32 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .library-container {
+    padding: 20px 10px;
+  }
+
+  .library-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .books-grid {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* Make book view container responsive */
+  .book-view-container {
+    height: 100vh;
+    overflow: hidden;
+    /* Prevent scrolling if flipbook fits */
+  }
+
+  .back-to-library-btn {
+    top: 10px;
+    left: 10px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
