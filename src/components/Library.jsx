@@ -9,115 +9,134 @@ const books = [
         id: 1,
         title: "SEMINARS AND FIELD STUDY",
         student: "KENT LYNNER ACUESTA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://kent-lynner-acuesta.netlify.app/"
     },
     {
         id: 2,
         title: "SEMINARS AND FIELD STUDY",
         student: "JULIUS RALPH ALAMA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://julius-ralph-alama.netlify.app/"
     },
     {
         id: 3,
         title: "SEMINARS AND FIELD STUDY",
         student: "VINCE ALTAREZ",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://vince-altarez.netlify.app/"
     },
     {
         id: 4,
         title: "SEMINARS AND FIELD STUDY",
         student: "JOHN PATRICK CAPULOT",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://john-patrick-capulot.netlify.app/"
     },
     {
         id: 5,
         title: "SEMINARS AND FIELD STUDY",
         student: "RICO JOHN CASQUETE",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://rico-john-casquete.netlify.app/"
     },
     {
         id: 6,
         title: "SEMINARS AND FIELD STUDY",
         student: "KYLE FRANCIS CONCEPCION",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://kyle-francis-concepcion.netlify.app/"
     },
     {
         id: 7,
         title: "SEMINARS AND FIELD STUDY",
         student: "SHERICA ANNE CHANTAL DUÑGO",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://sherica-anne-chantal-dungo.netlify.app/"
     },
     {
         id: 8,
         title: "SEMINARS AND FIELD STUDY",
         student: "PAUL ERNEST DUREZA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://paul-ernest-dureza.netlify.app/"
     },
     {
         id: 9,
         title: "SEMINARS AND FIELD STUDY",
         student: "ART JOSHUA ESMAEL",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://art-joshua-esmael.netlify.app/"
     },
     {
         id: 10,
         title: "SEMINARS AND FIELD STUDY",
         student: "THOMAS DOMINIC ESPINOSA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://thomas-dominic-espinosa.netlify.app/"
     },
     {
         id: 11,
         title: "SEMINARS AND FIELD STUDY",
         student: "ROBERT MAVERICK GARCIA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://robert-maverick-garcia.netlify.app/"
     },
     {
         id: 12,
         title: "SEMINARS AND FIELD STUDY",
         student: "VINCENT BLAISE GEONANGA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://vincent-blaise-geonanga.netlify.app/"
     },
     {
         id: 13,
         title: "SEMINARS AND FIELD STUDY",
         student: "ERLE JAN HIBIONADA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://erle-jan-hibionada.netlify.app/"
     },
     {
         id: 14,
         title: "SEMINARS AND FIELD STUDY",
         student: "MARK DAVID IMPERIAL",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://mark-david-imperial.netlify.app/"
     },
     {
         id: 15,
         title: "SEMINARS AND FIELD STUDY",
         student: "JOHN KEVIN LANGURAYAN",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://john-kevin-langurayan.netlify.app/"
     },
     {
         id: 16,
         title: "SEMINARS AND FIELD STUDY",
         student: "CHRISTEL SHAIRA LEDESMA",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://christel-shaira-ledesma.netlify.app/"
     },
     {
         id: 17,
         title: "SEMINARS AND FIELD STUDY",
         student: "YEVGENY SOLIS",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://yevgeny-solis.netlify.app/"
     },
     {
         id: 18,
         title: "SEMINARS AND FIELD STUDY",
         student: "ELLARIE SUERO",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "https://online.fliphtml5.com/ycycit/Suero_Portfolio/#p=1"
     },
     {
         id: 19,
         title: "SEMINARS AND FIELD STUDY",
         student: "MEL JOSEPH TATUD",
-        course: "Bachelor of Science in Entertainment & Multimedia Computing"
+        course: "Bachelor of Science in Entertainment & Multimedia Computing",
+        link: "#" // Keeping internal viewer or adding link if provided
     }
 ];
 
@@ -146,8 +165,8 @@ function Library({ onOpenBook }) {
                         onClick={() => {
                             if (book.student === "MEL JOSEPH TATUD") {
                                 onOpenBook(book.id);
-                            } else {
-                                window.open("https://example.com", "_blank");
+                            } else if (book.link) {
+                                window.open(book.link, "_blank");
                             }
                         }}
                     >
