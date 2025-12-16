@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import coverBg from '../assets/Cover Page - Front.png'; // Updated cover image
+import headerLogo from '../Logo/WORDMARK ORIGINAL 2 (WHITE)  .png';
 import cictLogo from '../assets/cict-logo.png';
 import wvsuLogo from '../assets/wvsu-logo.png';
 
@@ -153,8 +154,10 @@ function Library({ onOpenBook }) {
             </div>
 
             <header className="library-header">
-                <h1>2025 DIGITAL JOURNAL</h1>
-                <p>Bachelor of Science in Entertainment and Multimedia Computing</p>
+                {/* Logo moved to footer */}
+                <p className="header-paragraph">CC 209 - Seminar and Field Study</p>
+                <h1 className="header-main-title">BSEMC DIGITAL PORTFOLIO 2025</h1>
+                <h2 className="header-subheading">BSEMC 4A • 2025 • 1ST SEMESTER</h2>
             </header>
 
             <div className="books-grid">
@@ -197,6 +200,15 @@ function Library({ onOpenBook }) {
                     </div>
                 ))}
             </div>
+
+            <footer className="library-footer">
+                <img src={headerLogo} alt="BSEMC Logo" className="footer-logo" />
+                <div className="footer-info">
+                    <p>West Visayas State University</p>
+                    <p>College of Information and Communications Technology</p>
+                    <p>Bachelor of Science in Entertainment and Multimedia Computing</p>
+                </div>
+            </footer>
         </div>
     );
 }

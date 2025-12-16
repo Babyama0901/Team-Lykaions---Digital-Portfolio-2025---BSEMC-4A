@@ -73,25 +73,56 @@ body {
 
 .library-header {
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.library-header h1 {
-  font-size: 2.2rem;
+.footer-logo {
+  width: 300px;
+  max-width: 80%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  height: auto;
+  opacity: 0.8;
+  /* Optional: slightly mute it in footer */
+}
+
+.library-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.header-paragraph {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.header-main-title {
+  font-size: 2.5rem;
   font-weight: 800;
-  margin: 0;
-  background: linear-gradient(90deg, #aa8e86, #ef8e73);
+  margin: 0 0 10px 0;
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
-.library-header p {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 5px;
-  font-weight: 500;
+.header-subheading {
+  font-size: 1.1rem;
+  color: #aa8e86;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 /* Grid Layout */
