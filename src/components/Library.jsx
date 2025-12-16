@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import coverBg from '../assets/cover-bg.png';
+import coverBg from '../assets/Cover Page - Front.png'; // Updated cover image
 import cictLogo from '../assets/cict-logo.png';
 import wvsuLogo from '../assets/wvsu-logo.png';
 
@@ -73,7 +73,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "THOMAS DOMINIC ESPINOSA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://thomas-dominic-espinosa.netlify.app/"
+        link: "https://online.fliphtml5.com/ooubc/ESPINOSA-PORTFOLIO-CC209-AL1l/"
     },
     {
         id: 11,
@@ -176,29 +176,13 @@ function Library({ onOpenBook }) {
                                 <div className="book-spine-overlay"></div>
 
                                 {/* Top Logos & Header */}
-                                <div className="cover-header">
-                                    <img src={wvsuLogo} alt="WVSU Logo" className="uni-logo" />
-                                    <div className="uni-text-group">
-                                        <span className="uni-name">WEST VISAYAS STATE UNIVERSITY</span>
-                                        <span className="college-name">COLLEGE OF INFORMATION AND COMMUNICATIONS TECHNOLOGY</span>
-                                    </div>
-                                    <img src={cictLogo} alt="CICT Logo" className="uni-logo" />
-                                </div>
+                                {/* Top Logos & Header - REMOVED */}
 
-                                {/* Center Title */}
-                                <div className="cover-title-group">
-                                    <span className="portfolio-label">2025 DIGITAL PORTFOLIO</span>
-                                    <h2 className="main-title">
-                                        SEMINARS AND<br />
-                                        FIELD STUDY
-                                    </h2>
-                                </div>
+                                {/* Center Title - REMOVED */}
 
                                 {/* Bottom Info */}
                                 <div className="cover-footer">
-                                    <span className="presented-by">Presented by</span>
-                                    <h3 className="student-name-cover">{book.student}</h3>
-                                    <span className="student-course-cover">{book.course}</span>
+                                    <span className="student-name-cover">{book.student}</span>
                                 </div>
 
                                 {/* Visual overlay/sheen effect */}

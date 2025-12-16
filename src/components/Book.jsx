@@ -14,7 +14,9 @@ function Book() {
     // Extract numbers from filenames for comparison
     // Filenames are part of the URL/path, need to rely on typical structure or just standard natural sort
     return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-  });
+  }).slice(0, 24);
+
+  // console.log("Book: sortedImages", sortedImages);
 
   // State for book dimensions
   const [bookDimensions, setBookDimensions] = useState({ width: 450, height: 636 });
