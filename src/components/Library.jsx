@@ -18,7 +18,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "JULIUS RALPH ALAMA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://julius-ralph-alama.netlify.app/"
+        link: "https://online.fliphtml5.com/mubdiq/Alama-Folio--gAVQ/"
     },
     {
         id: 3,
