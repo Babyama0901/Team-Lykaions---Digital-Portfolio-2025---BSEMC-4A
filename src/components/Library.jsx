@@ -109,7 +109,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "JOHN KEVIN LANGURAYAN",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://john-kevin-langurayan.netlify.app/"
+        link: "https://online.fliphtml5.com/allgi/nfjv/#p=1"
     },
     {
         id: 16,
@@ -200,15 +200,6 @@ function Library({ onOpenBook }) {
                     </div>
                 ))}
             </div>
-
-            <footer className="library-footer">
-                <img src={headerLogo} alt="BSEMC Logo" className="footer-logo" />
-                <div className="footer-info">
-                    <p>West Visayas State University</p>
-                    <p>College of Information and Communications Technology</p>
-                    <p>Bachelor of Science in Entertainment and Multimedia Computing</p>
-                </div>
-            </footer>
         </div>
     );
 }
