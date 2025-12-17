@@ -18,22 +18,26 @@ function Book() {
 
   // console.log("Book: sortedImages", sortedImages);
 
-  // State for book dimensions
+  // State for book dimensions and mobile status
   const [bookDimensions, setBookDimensions] = useState({ width: 450, height: 636 });
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
+      const mobile = screenWidth < 768;
+
+      setIsMobile(mobile);
 
       // Base dimensions (desktop)
       let newWidth = 450;
       let newHeight = 636;
 
       // Mobile adjustment
-      if (screenWidth < 768) {
-        // Calculate max available width with some padding
-        const maxWidth = screenWidth - 20; // 10px padding on each side
+      if (mobile) {
+        // Calculate max available width with conservative padding
+        const maxWidth = screenWidth - 40; // 20px padding on each side
         // Maintain aspect ratio approx 1:1.414 (A4)
         const aspectRatio = 450 / 636;
 
@@ -41,7 +45,8 @@ function Book() {
         newHeight = newWidth / aspectRatio;
 
         // Check if height fits, if not constrain by height
-        const maxHeight = screenHeight - 100; // Space for button and margins
+        // Mobile view often has browser bars, so we need more buffer
+        const maxHeight = screenHeight - 140; // Space for button (top) + margins + browser bars
         if (newHeight > maxHeight) {
           newHeight = maxHeight;
           newWidth = newHeight * aspectRatio;
@@ -57,8 +62,6 @@ function Book() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const isMobile = window.innerWidth < 768;
 
   return (
     <HTMLFlipBook
