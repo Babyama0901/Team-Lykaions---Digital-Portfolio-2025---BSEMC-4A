@@ -25,7 +25,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "VINCE ALTAREZ",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://vince-altarez.netlify.app/"
+        link: "https://online.fliphtml5.com/npxxy/Page-1/"
     },
     {
         id: 4,
@@ -46,7 +46,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "KYLE FRANCIS CONCEPCION",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://kyle-francis-concepcion.netlify.app/"
+        link: "https://online.fliphtml5.com/reocu/yvlr/"
     },
     {
         id: 7,
@@ -81,14 +81,14 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "ROBERT MAVERICK GARCIA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://robert-maverick-garcia.netlify.app/"
+        link: "https://online.fliphtml5.com/onwpc/hcpt/"
     },
     {
         id: 12,
         title: "SEMINARS AND FIELD STUDY",
         student: "VINCENT BLAISE GEONANGA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://vincent-blaise-geonanga.netlify.app/"
+        link: "https://online.fliphtml5.com/ybpbj/Tour-1/"
     },
     {
         id: 13,
@@ -102,7 +102,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "MARK DAVID IMPERIAL",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://mark-david-imperial.netlify.app/"
+        link: "https://online.fliphtml5.com/rekuj/ekij/"
     },
     {
         id: 15,
@@ -116,7 +116,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "CHRISTEL SHAIRA LEDESMA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://christel-shaira-ledesma.netlify.app/"
+        link: "https://online.fliphtml5.com/shai_03/ogjb/"
     },
     {
         id: 17,
