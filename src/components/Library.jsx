@@ -53,7 +53,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "SHERICA ANNE CHANTAL DUÑGO",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://sherica-anne-chantal-dungo.netlify.app/"
+        link: "https://online.fliphtml5.com/Dungo_Portfolio/ggjy/#p=1"
     },
     {
         id: 8,
@@ -95,7 +95,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "ERLE JAN HIBIONADA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://erle-jan-hibionada.netlify.app/"
+        link: "https://online.fliphtml5.com/xpudw/zsrp/#p=1"
     },
     {
         id: 14,
