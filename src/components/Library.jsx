@@ -123,7 +123,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "YEVGENY SOLIS",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://yevgeny-solis.netlify.app/"
+        link: "https://online.fliphtml5.com/pbwlp/vwoz/"
     },
     {
         id: 18,
