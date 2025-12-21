@@ -32,7 +32,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "JOHN PATRICK CAPULOT",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://john-patrick-capulot.netlify.app/"
+        link: "https://online.fliphtml5.com/qhzrq/wdpo/"
     },
     {
         id: 5,
