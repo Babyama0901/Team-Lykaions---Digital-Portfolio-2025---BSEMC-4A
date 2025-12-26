@@ -11,7 +11,7 @@ const books = [
         title: "SEMINARS AND FIELD STUDY",
         student: "KENT LYNNER ACUESTA",
         course: "Bachelor of Science in Entertainment & Multimedia Computing",
-        link: "https://kent-lynner-acuesta.netlify.app/"
+        link: "https://online.fliphtml5.com/frplr/ACUESTA_PORTFOLIO_2025/"
     },
     {
         id: 2,
